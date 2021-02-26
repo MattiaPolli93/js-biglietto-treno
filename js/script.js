@@ -16,11 +16,13 @@ if (isNaN(km)) {
 } else {
     // Asking for Age
     var age = prompt("How old are you?");
-    // Checking that age is not 0 or less
+    // Checking that age is a number
     if (isNaN(age)) {
         age = prompt("This is not a valid number for your age I'm afraid... try again!");
-    }
-    else {
+    // Checking that age is not equal or less than 0
+    } if (age <= 0) {
+        alert("Nope, time to reload the page again");
+    } else {
         // Price
         var price = km * 0.21;        
         // Calculating price
